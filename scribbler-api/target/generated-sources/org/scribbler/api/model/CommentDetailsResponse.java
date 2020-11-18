@@ -1,0 +1,160 @@
+package org.scribbler.api.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * CommentDetailsResponse
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2020-11-15T16:23:32.253+06:00")
+
+public class CommentDetailsResponse   {
+  @JsonProperty("id")
+  private String id = null;
+
+  @JsonProperty("postContent")
+  private String postContent = null;
+
+  @JsonProperty("commentContent")
+  private String commentContent = null;
+
+  @JsonProperty("author")
+  private String author = null;
+
+  public CommentDetailsResponse id(String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * comment uuid
+   * @return id
+  **/
+  @ApiModelProperty(required = true, value = "comment uuid")
+  @NotNull
+
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public CommentDetailsResponse postContent(String postContent) {
+    this.postContent = postContent;
+    return this;
+  }
+
+  /**
+   * Content of the post
+   * @return postContent
+  **/
+  @ApiModelProperty(required = true, value = "Content of the post")
+  @NotNull
+
+
+  public String getPostContent() {
+    return postContent;
+  }
+
+  public void setPostContent(String postContent) {
+    this.postContent = postContent;
+  }
+
+  public CommentDetailsResponse commentContent(String commentContent) {
+    this.commentContent = commentContent;
+    return this;
+  }
+
+  /**
+   * comment content
+   * @return commentContent
+  **/
+  @ApiModelProperty(required = true, value = "comment content")
+  @NotNull
+
+
+  public String getCommentContent() {
+    return commentContent;
+  }
+
+  public void setCommentContent(String commentContent) {
+    this.commentContent = commentContent;
+  }
+
+  public CommentDetailsResponse author(String author) {
+    this.author = author;
+    return this;
+  }
+
+  /**
+   * comment author
+   * @return author
+  **/
+  @ApiModelProperty(required = true, value = "comment author")
+  @NotNull
+
+
+  public String getAuthor() {
+    return author;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    CommentDetailsResponse commentDetailsResponse = (CommentDetailsResponse) o;
+    return Objects.equals(this.id, commentDetailsResponse.id) &&
+        Objects.equals(this.postContent, commentDetailsResponse.postContent) &&
+        Objects.equals(this.commentContent, commentDetailsResponse.commentContent) &&
+        Objects.equals(this.author, commentDetailsResponse.author);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, postContent, commentContent, author);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class CommentDetailsResponse {\n");
+    
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    postContent: ").append(toIndentedString(postContent)).append("\n");
+    sb.append("    commentContent: ").append(toIndentedString(commentContent)).append("\n");
+    sb.append("    author: ").append(toIndentedString(author)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+
