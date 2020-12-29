@@ -64,7 +64,7 @@ public class CommentBusinessService {
 
             throw new CommentNotFoundException("COM-001","Entered comment uuid does not exist");
         }
-        if(!userAuthEntity.getUser().getUuid().equals(commentEntity.getUser().getUuid())||!userAuthEntity.getUser().getUuid().equals(commentEntity.getPost().getUser().getUuid())){
+        if(!((userAuthEntity.getUser().getUuid().equals(commentEntity.getUser().getUuid()))||(userAuthEntity.getUser().getUuid().equals(commentEntity.getPost().getUser().getUuid())))){
 
             throw new AuthorizationFailedException("ATHR-003","Only the comment owner or the Post owner can delete the answer");
         }
